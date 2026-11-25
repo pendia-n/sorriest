@@ -1,0 +1,30 @@
+{
+  "name": "sorriest",
+  "main": "balagan-worker/index.mjs",
+  "compatibility_date": "2026-11-17",
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "routes": [
+    {
+      "pattern": "sorriest.balagan.live",
+      "custom_domain": true
+    }
+  ],
+  "services": [
+    {
+      "binding": "BALAGAN",
+      "service": "balagan"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sorriest-db",
+      "database_id": "571c2a5f-a2bb-456a-afc6-d2b08d4cd19e",
+      "migrations_dir": "balagan-worker/migrations"
+    }
+  ]
+}

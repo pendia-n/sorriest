@@ -1,0 +1,35 @@
+{
+	"name": "sorry-better",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"preview": "pnpm run build && wrangler dev",
+		"postinstall": "nuxt prepare",
+		"lint": "eslint .",
+		"typecheck": "nuxt typecheck",
+		"deploy": "pnpm run build && wrangler deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@iconify-json/lucide": "^1.2.147",
+		"@iconify-json/simple-icons": "^1.2.100",
+		"@nuxt/ui": "^4.12.0",
+		"nuxt": "^4.6.3",
+		"tailwindcss": "^4.3.3"
+	},
+	"devDependencies": {
+		"@nuxt/eslint": "^1.17.0",
+		"@types/node": "^26.6.6",
+		"eslint": "^10.13.0",
+		"eslint-plugin-better-tailwindcss": "^4.10.0",
+		"h3": "^1.15.11",
+		"nitro-cloudflare-dev": "^0.2.2",
+		"nitropack": "^2.13.6",
+		"typescript": "^6.0.3",
+		"vue-tsc": "^3.3.13",
+		"wrangler": "^4.161.0"
+	},
+	"packageManager": "pnpm@12.15.0"
+}
